@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageViewDomain.cs" />
     <Compile Include="PersonInformationDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

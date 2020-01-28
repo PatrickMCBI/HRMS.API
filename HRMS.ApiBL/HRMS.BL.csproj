@@ -42,7 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\IBaseBL.cs" />
+    <Compile Include="PersonInformationBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DL\HRMS.DL.csproj">
+      <Project>{0bb8f853-99b1-43ca-ad56-fdf609c35e73}</Project>
+      <Name>HRMS.DL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
