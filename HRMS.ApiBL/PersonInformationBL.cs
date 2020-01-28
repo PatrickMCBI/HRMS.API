@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using HRMS.DL;
 using System.Data;
 using System.Data.SqlClient;
+using HRMS.DAL;
 
 namespace HRMS.ApiBL
 {
@@ -17,7 +18,7 @@ namespace HRMS.ApiBL
 
     public class PersonInformationBL : Common.BaseBL, IPersonInformationBL<PersonInformationDL>
     {
-        private IDBHelper _dbHelper = new DBHelper();
+        private IHRMSDBDAL _dbHelper = new HRMSDBDL();
 
         public MessageViewDomain Command(PersonInformationDL projectDomain, string commandType)
         {
@@ -25,10 +26,12 @@ namespace HRMS.ApiBL
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@Name", Value = projectDomain.Name, Direction = ParameterDirection.Input }
+                new SqlParameter { ParameterName = "@FirstName", Value = projectDomain.FirstName, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@MiddleName", Value = projectDomain.MiddleName, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@LastName", Value = projectDomain.LastName, Direction = ParameterDirection.Input }
             };
 
-            return this.GetMessage(_dbHelper.Command("sp001invRefCategory1Command", commandType, sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("", sqlParameters, commandType));
 
 
         }
@@ -63,13 +66,16 @@ namespace HRMS.ApiBL
             List<SqlParameter> pars = new List<SqlParameter>();
             pars.Add(new SqlParameter { ParameterName = "ID", Value = id, Direction = ParameterDirection.Input });
 
-            return _dbHelper.GetRecords("sp001invRefCategory1Select", pars).Tables[0].AsEnumerable().Select
+            return _dbHelper.Select("spGetBasicInfo", pars).Tables[0].AsEnumerable().Select
             (
                 drow => new PersonInformationDL
                 {
                     ID = drow.Field<int>("ID"),
-                    Name = drow.Field<string>("Name")
+                    FirstName = drow.Field<string>("FirstName"),
+                    MiddleName = drow.Field<string>("MiddleName"),
+                    LastName = drow.Field<string>("LastName")
                 }
             );
         }
     }
+}

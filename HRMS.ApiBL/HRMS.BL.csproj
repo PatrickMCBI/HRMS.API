@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HRMS.ApiBL</RootNamespace>
     <AssemblyName>HRMS.ApiBL</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,6 +50,10 @@
     <ProjectReference Include="..\DL\HRMS.DL.csproj">
       <Project>{0bb8f853-99b1-43ca-ad56-fdf609c35e73}</Project>
       <Name>HRMS.DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRMS.DAL\HRMS.DAL.csproj">
+      <Project>{5a67e380-9537-4291-adb8-9aaebbb3ef52}</Project>
+      <Name>HRMS.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

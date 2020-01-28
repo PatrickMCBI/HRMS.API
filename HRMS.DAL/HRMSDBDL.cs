@@ -26,26 +26,18 @@ namespace HRMS.DAL
 
         public DataSet Select(string sp, List<SqlParameter> sqlParameters)
         {
-            SqlConnection con = new SqlConnection(Properties.Settings.Default.connection);
-
-            SqlCommand sqlCommand = new SqlCommand
+            using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connection))
             {
-                CommandType = CommandType.StoredProcedure
-            };
-
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sp, con);
-
-            sqlCommand.Parameters.AddRange(sqlParameters.ToArray());
-
-            DataSet dataSet = new DataSet();
-
-            con.Open();
-
-            sqlDataAdapter.Fill(dataSet);
-
-            con.Close();
-
-            return dataSet;
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(sp, connection);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                if (sqlParameters.Count != 0)
+                    da.SelectCommand.Parameters.AddRange(sqlParameters.ToArray());
+                da.Fill(ds);
+                da.Dispose();
+                return ds;
+            }
+            return null;
         }
     }
 }

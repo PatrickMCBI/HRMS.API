@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using HRMS.DL;
 
-namespace HRMS.BL.Common
+namespace HRMS.Common
 {
     public interface IBaseBL<TEntity> where TEntity : class
     {
@@ -31,3 +31,4 @@ namespace HRMS.BL.Common
                 }).FirstOrDefault();
         }
     }
+}
