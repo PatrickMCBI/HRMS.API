@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRMS.API", "HRMS.API\HRMS.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRMS.DL", "DL\HRMS.DL.csproj", "{0BB8F853-99B1-43CA-AD56-FDF609C35E73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRMS.DAL", "HRMS.DAL\HRMS.DAL.csproj", "{5A67E380-9537-4291-ADB8-9AAEBBB3EF52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0BB8F853-99B1-43CA-AD56-FDF609C35E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BB8F853-99B1-43CA-AD56-FDF609C35E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BB8F853-99B1-43CA-AD56-FDF609C35E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A67E380-9537-4291-ADB8-9AAEBBB3EF52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A67E380-9537-4291-ADB8-9AAEBBB3EF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A67E380-9537-4291-ADB8-9AAEBBB3EF52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A67E380-9537-4291-ADB8-9AAEBBB3EF52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
