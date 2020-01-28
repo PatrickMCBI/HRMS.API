@@ -19,5 +19,12 @@ namespace HRMS.API
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_PreSendRequestHeaders(object sender, EventArgs e)
+        {
+            HttpContext.Current.Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            HttpContext.Current.Response.Headers.Add("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE, OPTIONS");
+            HttpContext.Current.Response.Headers.Add("Access-Control-Allow-Headers", "Origin, Content-Type, X-Auth-Token");
+        }
     }
 }
