@@ -35,7 +35,7 @@ namespace HRMS.ApiBL
                 new SqlParameter { ParameterName = "@employementStatusID", Value = projectDomain.employementStatusID, Direction = ParameterDirection.Input }
             };
 
-            return this.GetMessage(_dbHelper.Command("sp001invRefCategory1Command", commandType.ToString(), sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp002chrmEmploymentInfoCommand", commandType.ToString(), sqlParameters).Tables[0]);
 
 
         }
@@ -84,7 +84,7 @@ namespace HRMS.ApiBL
                     Name = drow.Field<string>("Name")
                 }
             );*/
-            string tabledata = _dbHelper.GetRecords("sp001invRefCategory1Select", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            string tabledata = _dbHelper.GetRecords("sp002chrmEmploymentInfoSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_002c_hrmEmploymentInfoDomain>>(tabledata);
 
         }

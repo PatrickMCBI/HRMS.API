@@ -14,8 +14,7 @@ namespace HRMS.ApiBL
 {
     public interface I_001e_hrmRefPositionRankListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-        MessageViewDomain Command(_001e_hrmRefPositionRankListBL body, Command update);
-        MessageViewDomain Command(_001e_hrmRefPositionRankListDomain body, Command insert);
+        
     }
 
     public class _001e_hrmRefPositionRankListBL : Common.BaseBL, I_001e_hrmRefPositionRankListBL<_001e_hrmRefPositionRankListDomain>
@@ -33,7 +32,7 @@ namespace HRMS.ApiBL
                 new SqlParameter { ParameterName = "@baseSalary", Value = projectDomain.baseSalary, Direction = ParameterDirection.Input }
             };
 
-            return this.GetMessage(_dbHelper.Command("sp001invRefCategory1Command", commandType.ToString(), sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp001ehrmRefPositionRankListCommand", commandType.ToString(), sqlParameters).Tables[0]);
 
 
         }
@@ -82,7 +81,7 @@ namespace HRMS.ApiBL
                     Name = drow.Field<string>("Name")
                 }
             );*/
-            string tabledata = _dbHelper.GetRecords("sp001invRefCategory1Select", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            string tabledata = _dbHelper.GetRecords("sp001ehrmRefPositionRankListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_001e_hrmRefPositionRankListDomain>>(tabledata);
 
         }

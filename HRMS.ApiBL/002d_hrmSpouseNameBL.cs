@@ -34,7 +34,7 @@ namespace HRMS.ApiBL
                 new SqlParameter { ParameterName = "@dateOfBirth", Value = projectDomain.v, Direction = ParameterDirection.Input }
             };
 
-            return this.GetMessage(_dbHelper.Command("sp001invRefCategory1Command", commandType.ToString(), sqlParameters).Tables[0]);
+            return this.GetMessage(_dbHelper.Command("sp002dhrmSpouseNameCommand", commandType.ToString(), sqlParameters).Tables[0]);
 
 
         }
@@ -83,7 +83,7 @@ namespace HRMS.ApiBL
                     Name = drow.Field<string>("Name")
                 }
             );*/
-            string tabledata = _dbHelper.GetRecords("sp001invRefCategory1Select", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            string tabledata = _dbHelper.GetRecords("sp002dhrmSpouseNameSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_002d_hrmSpouseNameDomain>>(tabledata);
 
         }
