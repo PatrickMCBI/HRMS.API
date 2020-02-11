@@ -26,10 +26,10 @@ namespace HRMS.DAL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=124.105.198.3; database=HRMS1;user=sa;password=MCBI_ITadmin;")]
-        public string connectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("server=mcbi-dev; database=ERP_HRMS;user=sa;password=MCBI_ITadmin;")]
+        public string connection {
             get {
-                return ((string)(this["connectionString"]));
+                return ((string)(this["connection"]));
             }
         }
     }
