@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,6 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="001a_hrmRefPrefixList.cs" />
+    <Compile Include="001b_hrmRefGenderList.cs" />
+    <Compile Include="001c_hrmRefEmpNumberList.cs" />
+    <Compile Include="001d_hrmRefPositionList.cs" />
+    <Compile Include="001e_hrmRefPositionRankList.cs" />
+    <Compile Include="001f_hrmRefEmpStatusList.cs" />
+    <Compile Include="001g_hrmRefEmpTypeList.cs" />
+    <Compile Include="002a_hrmEmpMasterList.cs" />
+    <Compile Include="002b_hrmPersonalInfo.cs" />
+    <Compile Include="002c_hrmEmploymentInfo.cs" />
+    <Compile Include="002d_hrmSpouseName.cs" />
+    <Compile Include="002e_hrmEmpAllowance.cs" />
+    <Compile Include="002f_hrmEmpPosition.cs" />
+    <Compile Include="002g_hrmEmpSalary.cs" />
+    <Compile Include="002h_hrmEmpSalaryAddOn.cs" />
+    <Compile Include="Command.cs" />
     <Compile Include="MessageViewDomain.cs" />
     <Compile Include="PersonInformationDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

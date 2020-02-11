@@ -18,7 +18,7 @@ namespace HRMS.ApiBL
 
     public class PersonInformationBL : Common.BaseBL, IPersonInformationBL<PersonInformationDL>
     {
-        private IHRMSDBDAL _dbHelper = new HRMSDBDL();
+        private IDBHelper _dbHelper = new DBHelper();
 
         public MessageViewDomain Command(PersonInformationDL projectDomain, string commandType)
         {
@@ -31,7 +31,7 @@ namespace HRMS.ApiBL
                 new SqlParameter { ParameterName = "@LastName", Value = projectDomain.LastName, Direction = ParameterDirection.Input }
             };
 
-            return this.GetMessage(_dbHelper.Command("", sqlParameters, commandType));
+            return this.GetMessage(_dbHelper.Command("sp001invRefCategory1Command", commandType.ToString(), sqlParameters).Tables[0]);
 
 
         }

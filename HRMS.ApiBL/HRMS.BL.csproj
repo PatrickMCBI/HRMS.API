@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,6 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="001a_hrmRefPrefixListBL.cs" />
+    <Compile Include="001b_hrmRefGenderListBL.cs" />
+    <Compile Include="001c_hrmRefEmpNumberListBL.cs" />
+    <Compile Include="001d_hrmRefPositionListBL.cs" />
+    <Compile Include="001e_hrmRefPositionRankListBL.cs" />
+    <Compile Include="001f_hrmRefEmpStatusListBL.cs" />
+    <Compile Include="001g_hrmRefEmpTypeListBL.cs" />
+    <Compile Include="002a_hrmEmpMasterListBL.cs" />
+    <Compile Include="002b_hrmPersonalInfoBL.cs" />
+    <Compile Include="002c_hrmEmploymentInfoBL.cs" />
+    <Compile Include="002d_hrmSpouseNameBL.cs" />
+    <Compile Include="002e_hrmEmpAllowanceBL.cs" />
+    <Compile Include="002f_hrmEmpPositionBL.cs" />
+    <Compile Include="002g_hrmEmpSalaryBL.cs" />
+    <Compile Include="002h_hrmEmpSalaryAddOnBL.cs" />
     <Compile Include="Common\IBaseBL.cs" />
     <Compile Include="PersonInformationBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +73,9 @@
       <Project>{5a67e380-9537-4291-adb8-9aaebbb3ef52}</Project>
       <Name>HRMS.DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
