@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace DL
+namespace HRMSDL
 {
     public class _002c_hrmEmploymentInfoDomain
     {

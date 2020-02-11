@@ -7,14 +7,12 @@ using HRMS.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
-using DL;
-using HRMS.DL;
+using HRMSDL;
 
 namespace HRMS.ApiBL
 {
     public interface I_002h_hrmEmpSalaryAddOnBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-        MessageViewDomain Command(_002h_hrmEmpSalaryAddOnDomain body, Command insert);
     }
 
     public class _002h_hrmEmpSalaryAddOnBL : Common.BaseBL, I_002h_hrmEmpSalaryAddOnBL<_002h_hrmEmpSalaryAddOnDomain>
@@ -46,7 +44,7 @@ namespace HRMS.ApiBL
         public MessageViewDomain Delete(int id)
         {
             // throw new NotImplementedException();
-            return Command(new _002h_hrmEmpSalaryAddOnDomain() { ID = id }, DL.Command.Delete);
+            return Command(new _002h_hrmEmpSalaryAddOnDomain() { ID = id }, HRMSDL.Command.Delete);
         }
 
         public IEnumerable<_002h_hrmEmpSalaryAddOnDomain> Get()

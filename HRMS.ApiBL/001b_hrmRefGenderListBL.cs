@@ -7,14 +7,12 @@ using HRMS.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
-using DL;
-using HRMS.DL;
+using HRMSDL;
 
 namespace HRMS.ApiBL
 {
     public interface I_001b_hrmRefGenderListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-        MessageViewDomain Command(_001b_hrmRefGenderListDomain body, Command update);
     }
 
     public class _001b_hrmRefGenderListBL : Common.BaseBL, I_001b_hrmRefGenderListBL<_001b_hrmRefGenderListDomain>
@@ -43,7 +41,7 @@ namespace HRMS.ApiBL
         public MessageViewDomain Delete(int id)
         {
             // throw new NotImplementedException();
-            return Command(new _001b_hrmRefGenderListDomain() { ID = id }, DL.Command.Delete);
+            return Command(new _001b_hrmRefGenderListDomain() { ID = id }, HRMSDL.Command.Delete);
         }
 
         public IEnumerable<_001b_hrmRefGenderListDomain> Get()

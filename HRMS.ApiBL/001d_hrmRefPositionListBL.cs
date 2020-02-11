@@ -7,14 +7,12 @@ using HRMS.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
-using DL;
-using HRMS.DL;
+using HRMSDL;
 
 namespace HRMS.ApiBL
 {
     public interface I_001d_hrmRefPositionListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-        MessageViewDomain Command(_001d_hrmRefPositionListDomain body, Command update);
     }
 
     public class _001d_hrmRefPositionListBL : Common.BaseBL, I_001d_hrmRefPositionListBL<_001d_hrmRefPositionListDomain>
@@ -43,7 +41,7 @@ namespace HRMS.ApiBL
         public MessageViewDomain Delete(int id)
         {
             // throw new NotImplementedException();
-            return Command(new _001d_hrmRefPositionListDomain() { ID = id }, DL.Command.Delete);
+            return Command(new _001d_hrmRefPositionListDomain() { ID = id }, HRMSDL.Command.Delete);
         }
 
         public IEnumerable<_001d_hrmRefPositionListDomain> Get()
@@ -79,7 +77,7 @@ namespace HRMS.ApiBL
                     Name = drow.Field<string>("Name")
                 }
             );*/
-            string tabledata = _dbHelper.GetRecords("sp001dhrmRefEmpNumberListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            string tabledata = _dbHelper.GetRecords("sp001dhrmRefPositionListSelect", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<_001d_hrmRefPositionListDomain>>(tabledata);
 
         }

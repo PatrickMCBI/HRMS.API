@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using HRMS.DL;
+using HRMSDL;
 
 namespace HRMS.Common
 {
@@ -13,7 +13,7 @@ namespace HRMS.Common
         IEnumerable<TEntity> Get();
         TEntity Get(int id);
         IEnumerable<TEntity> Search(int offset, int limit, string orderBy);
-        MessageViewDomain Command(TEntity entity, string commandType);
+        MessageViewDomain Command(TEntity entity, Command commandType);
         MessageViewDomain Delete(int id);
     }
 

@@ -25,8 +25,20 @@ namespace HRMS.DAL.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=mcbi-dev; database=ERP_HRMS;user=sa;password=MCBI_ITadmin;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=mcbi-dev;password=MCBI_ITadmin;user=sa;connection timeout=0;Initial Catalo" +
+            "g = ERP_HRMS1;")]
+        public string connectionString {
+            get {
+                return ((string)(this["connectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<SerializableConnectionString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+  <ConnectionString>server=mcbi-dev; database=ERP_HRMS;user=sa;password=MCBI_ITadmin;</ConnectionString>
+</SerializableConnectionString>")]
         public string connection {
             get {
                 return ((string)(this["connection"]));

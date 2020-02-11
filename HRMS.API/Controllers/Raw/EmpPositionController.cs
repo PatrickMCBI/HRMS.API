@@ -4,12 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using DL;
+using HRMSDL;
 using HRMS.Filters;
 using HRMS.ApiBL;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
-using HRMS.DL;
 
 
 namespace HRMS.API.Controllers

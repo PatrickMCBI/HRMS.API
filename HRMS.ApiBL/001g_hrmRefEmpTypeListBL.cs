@@ -7,14 +7,12 @@ using HRMS.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
-using DL;
-using HRMS.DL;
+using HRMSDL;
 
 namespace HRMS.ApiBL
 {
     public interface I_001g_hrmRefEmpTypeListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-        MessageViewDomain Command(_001g_hrmRefEmpTypeListDomain body, Command update);
     }
 
     public class _001g_hrmRefEmpTypeListBL : Common.BaseBL, I_001g_hrmRefEmpTypeListBL<_001g_hrmRefEmpTypeListDomain>
@@ -43,7 +41,7 @@ namespace HRMS.ApiBL
         public MessageViewDomain Delete(int id)
         {
             // throw new NotImplementedException();
-            return Command(new _001g_hrmRefEmpTypeListDomain() { ID = id }, DL.Command.Delete);
+            return Command(new _001g_hrmRefEmpTypeListDomain() { ID = id }, HRMSDL.Command.Delete);
         }
 
         public IEnumerable<_001g_hrmRefEmpTypeListDomain> Get()

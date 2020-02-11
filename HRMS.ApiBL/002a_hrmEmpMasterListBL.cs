@@ -7,14 +7,12 @@ using HRMS.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
-using DL;
-using HRMS.DL;
+using HRMSDL;
 
 namespace HRMS.ApiBL
 {
     public interface I_002a_hrmEmpMasterListBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-        MessageViewDomain Command(_002a_hrmEmpMasterListDomain body, Command insert);
     }
 
     public class _002a_hrmEmpMasterListBL : Common.BaseBL, I_002a_hrmEmpMasterListBL<_002a_hrmEmpMasterListDomain>
@@ -27,7 +25,7 @@ namespace HRMS.ApiBL
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
-                new SqlParameter { ParameterName = "@empNoId_011c", Value = projectDomain.empNoId_011c, Direction = ParameterDirection.Input },
+                new SqlParameter { ParameterName = "@empNoID_001c", Value = projectDomain.empNoID_001c, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@firstName", Value = projectDomain.firstName, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@middleName", Value = projectDomain.middleName, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@lastName", Value = projectDomain.lastName, Direction = ParameterDirection.Input },
@@ -48,7 +46,7 @@ namespace HRMS.ApiBL
         public MessageViewDomain Delete(int id)
         {
             // throw new NotImplementedException();
-            return Command(new _002a_hrmEmpMasterListDomain() { ID = id }, DL.Command.Delete);
+            return Command(new _002a_hrmEmpMasterListDomain() { ID = id }, HRMSDL.Command.Delete);
         }
 
         public IEnumerable<_002a_hrmEmpMasterListDomain> Get()

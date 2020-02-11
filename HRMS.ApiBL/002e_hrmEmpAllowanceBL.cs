@@ -7,8 +7,7 @@ using HRMS.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
-using DL;
-using HRMS.DL;
+using HRMSDL;
 
 namespace HRMS.ApiBL
 {
@@ -43,7 +42,7 @@ namespace HRMS.ApiBL
         public MessageViewDomain Delete(int id)
         {
             // throw new NotImplementedException();
-            return Command(new _002e_hrmEmpAllowanceDomain() { ID = id }, DL.Command.Delete);
+            return Command(new _002e_hrmEmpAllowanceDomain() { ID = id }, HRMSDL.Command.Delete);
         }
 
         public IEnumerable<_002e_hrmEmpAllowanceDomain> Get()

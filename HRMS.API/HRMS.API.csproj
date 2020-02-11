@@ -190,7 +190,6 @@
     <Compile Include="Controllers\Raw\EmpTypeListController.cs" />
     <Compile Include="Controllers\Raw\GenderListController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PersonInformationController.cs" />
     <Compile Include="Controllers\Raw\PersonalInfoController.cs" />
     <Compile Include="Controllers\Raw\PositionListController.cs" />
     <Compile Include="Controllers\Raw\PositionRankListController.cs" />

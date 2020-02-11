@@ -7,14 +7,12 @@ using HRMS.DAL;
 using System.Data;
 using System.Data.SqlClient;
 using Newtonsoft.Json;
-using DL;
-using HRMS.DL;
+using HRMSDL;
 
 namespace HRMS.ApiBL
 {
     public interface I_002d_hrmSpouseNameBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
-        MessageViewDomain Command(_002d_hrmSpouseNameDomain body, Command update);
     }
 
     public class _002d_hrmSpouseNameBL : Common.BaseBL, I_002d_hrmSpouseNameBL<_002d_hrmSpouseNameDomain>
@@ -31,7 +29,7 @@ namespace HRMS.ApiBL
                 new SqlParameter { ParameterName = "@firstName", Value = projectDomain.firstName, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@middleName", Value = projectDomain.middleName, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@lastName", Value = projectDomain.lastName, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@dateOfBirth", Value = projectDomain.v, Direction = ParameterDirection.Input }
+                new SqlParameter { ParameterName = "@dateOfBirth", Value = projectDomain.dateOfBirth, Direction = ParameterDirection.Input }
             };
 
             return this.GetMessage(_dbHelper.Command("sp002dhrmSpouseNameCommand", commandType.ToString(), sqlParameters).Tables[0]);
@@ -47,7 +45,7 @@ namespace HRMS.ApiBL
         public MessageViewDomain Delete(int id)
         {
             // throw new NotImplementedException();
-            return Command(new _002d_hrmSpouseNameDomain() { ID = id }, DL.Command.Delete);
+            return Command(new _002d_hrmSpouseNameDomain() { ID = id }, HRMSDL.Command.Delete);
         }
 
         public IEnumerable<_002d_hrmSpouseNameDomain> Get()

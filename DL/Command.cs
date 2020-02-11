@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRMS.DL
+namespace HRMSDL
 {
     public enum Command { Insert, Update, Delete }
 }

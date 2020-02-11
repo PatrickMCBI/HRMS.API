@@ -6,7 +6,7 @@ using Autofac.Integration.WebApi;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Inventory_API4.App_Start
+namespace HRMS.API.App_Start
 {
     public class ContainerConfig
     {
@@ -26,21 +26,21 @@ namespace Inventory_API4.App_Start
             //Item Data Registering.....
             //builder.RegisterType<SQLBL>().As<ISQLBL>().WithParameter("connectionString", Properties.Settings.Default.connectionString);
 
-            builder.RegisterType<HRMS.ApiBL._001a_hrmRefPrefixListBL>().As<HRMS.ApiBL.I_001a_hrmRefPrefixListBL<DL._001a_hrmRefPrefixListDomain>>();
-            builder.RegisterType< HRMS.ApiBL._001b_hrmRefGenderListBL >().As<HRMS.ApiBL.I_001b_hrmRefGenderListBL<DL._001b_hrmRefGenderListDomain>>();
-            builder.RegisterType<HRMS.ApiBL._001c_hrmRefEmpNumberListBL>().As<HRMS.ApiBL.I_001c_hrmRefEmpNumberListBL<DL._001c_hrmRefEmpNumberListDomain>>();
-            builder.RegisterType<HRMS.ApiBL._001d_hrmRefPositionListBL>().As<HRMS.ApiBL.I_001d_hrmRefPositionListBL<DL._001d_hrmRefPositionListDomain>>();
-            builder.RegisterType<HRMS.ApiBL._001e_hrmRefPositionRankListBL>().As<HRMS.ApiBL.I_001e_hrmRefPositionRankListBL<DL._001e_hrmRefPositionRankListDomain>>();
-            builder.RegisterType<HRMS.ApiBL._001f_hrmRefEmpStatusListBLv>().As<HRMS.ApiBL.I_001f_hrmRefEmpStatusListBLv<DL._001f_hrmRefEmpStatusListDomain>>();
-            builder.RegisterType<HRMS.ApiBL._001g_hrmRefEmpTypeListBL>().As<HRMS.ApiBL.I_001g_hrmRefEmpTypeListBL<DL._001g_hrmRefEmpTypeListDomain>>();
-            builder.RegisterType<HRMS.ApiBL._002a_hrmEmpMasterListBL>().As<HRMS.ApiBL.I_002a_hrmEmpMasterListBL<DL._002a_hrmEmpMasterListDomain>>();
-            builder.RegisterType<HRMS.ApiBL._002b_hrmPersonalInfoBL>().As<HRMS.ApiBL.I_002b_hrmPersonalInfoBL<DL._002b_hrmPersonalInfoDomain>>();
-            builder.RegisterType<HRMS.ApiBL._002c_hrmEmploymentInfoBL>().As<HRMS.ApiBL.I_002c_hrmEmploymentInfoBL<DL._002c_hrmEmploymentInfoDomain>>();
-            builder.RegisterType<HRMS.ApiBL._002d_hrmSpouseNameBL>().As<HRMS.ApiBL.I_002d_hrmSpouseNameBL<DL._002d_hrmSpouseNameDomain>>();
-            builder.RegisterType<HRMS.ApiBL._002e_hrmEmpAllowanceBL>().As<HRMS.ApiBL.I_002e_hrmEmpAllowanceBL<DL._002e_hrmEmpAllowanceDomain>>();
-            builder.RegisterType<HRMS.ApiBL._002f_hrmEmpPositionBL>().As<HRMS.ApiBL.I_002f_hrmEmpPositionBL<DL._002f_hrmEmpPositionDomain>>();
-            builder.RegisterType<HRMS.ApiBL._002g_hrmEmpSalaryBL>().As<HRMS.ApiBL.I_002g_hrmEmpSalaryBL<DL._002g_hrmEmpSalaryDomain>>();
-            builder.RegisterType<HRMS.ApiBL._002h_hrmEmpSalaryAddOnBL>().As<HRMS.ApiBL.I_002h_hrmEmpSalaryAddOnBL<DL._002h_hrmEmpSalaryAddOnDomain>>();
+            builder.RegisterType<HRMS.ApiBL._001a_hrmRefPrefixListBL>().As<HRMS.ApiBL.I_001a_hrmRefPrefixListBL<HRMSDL._001a_hrmRefPrefixListDomain>>();
+            builder.RegisterType< HRMS.ApiBL._001b_hrmRefGenderListBL >().As<HRMS.ApiBL.I_001b_hrmRefGenderListBL<HRMSDL._001b_hrmRefGenderListDomain>>();
+            builder.RegisterType<HRMS.ApiBL._001c_hrmRefEmpNumberListBL>().As<HRMS.ApiBL.I_001c_hrmRefEmpNumberListBL<HRMSDL._001c_hrmRefEmpNumberListDomain>>();
+            builder.RegisterType<HRMS.ApiBL._001d_hrmRefPositionListBL>().As<HRMS.ApiBL.I_001d_hrmRefPositionListBL<HRMSDL._001d_hrmRefPositionListDomain>>();
+            builder.RegisterType<HRMS.ApiBL._001e_hrmRefPositionRankListBL>().As<HRMS.ApiBL.I_001e_hrmRefPositionRankListBL<HRMSDL._001e_hrmRefPositionRankListDomain>>();
+            builder.RegisterType<HRMS.ApiBL._001f_hrmRefEmpStatusListBLv>().As<HRMS.ApiBL.I_001f_hrmRefEmpStatusListBLv<HRMSDL._001f_hrmRefEmpStatusListDomain>>();
+            builder.RegisterType<HRMS.ApiBL._001g_hrmRefEmpTypeListBL>().As<HRMS.ApiBL.I_001g_hrmRefEmpTypeListBL<HRMSDL._001g_hrmRefEmpTypeListDomain>>();
+            builder.RegisterType<HRMS.ApiBL._002a_hrmEmpMasterListBL>().As<HRMS.ApiBL.I_002a_hrmEmpMasterListBL<HRMSDL._002a_hrmEmpMasterListDomain>>();
+            builder.RegisterType<HRMS.ApiBL._002b_hrmPersonalInfoBL>().As<HRMS.ApiBL.I_002b_hrmPersonalInfoBL<HRMSDL._002b_hrmPersonalInfoDomain>>();
+            builder.RegisterType<HRMS.ApiBL._002c_hrmEmploymentInfoBL>().As<HRMS.ApiBL.I_002c_hrmEmploymentInfoBL<HRMSDL._002c_hrmEmploymentInfoDomain>>();
+            builder.RegisterType<HRMS.ApiBL._002d_hrmSpouseNameBL>().As<HRMS.ApiBL.I_002d_hrmSpouseNameBL<HRMSDL._002d_hrmSpouseNameDomain>>();
+            builder.RegisterType<HRMS.ApiBL._002e_hrmEmpAllowanceBL>().As<HRMS.ApiBL.I_002e_hrmEmpAllowanceBL<HRMSDL._002e_hrmEmpAllowanceDomain>>();
+            builder.RegisterType<HRMS.ApiBL._002f_hrmEmpPositionBL>().As<HRMS.ApiBL.I_002f_hrmEmpPositionBL<HRMSDL._002f_hrmEmpPositionDomain>>();
+            builder.RegisterType<HRMS.ApiBL._002g_hrmEmpSalaryBL>().As<HRMS.ApiBL.I_002g_hrmEmpSalaryBL<HRMSDL._002g_hrmEmpSalaryDomain>>();
+            builder.RegisterType<HRMS.ApiBL._002h_hrmEmpSalaryAddOnBL>().As<HRMS.ApiBL.I_002h_hrmEmpSalaryAddOnBL<HRMSDL._002h_hrmEmpSalaryAddOnDomain>>();
 
             List<Autofac.Core.Parameter> pars = new List<Autofac.Core.Parameter>();
             //pars.Add( new Autofac.Core.Parameter(""))
