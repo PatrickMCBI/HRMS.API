@@ -65,6 +65,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\source\repos\Inventory-API4\Helper\Helper.csproj">
+      <Project>{36ea3f0d-4906-4eda-ae1e-1abcc0791879}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DL\HRMS.DL.csproj">
       <Project>{0bb8f853-99b1-43ca-ad56-fdf609c35e73}</Project>
       <Name>HRMS.DL</Name>

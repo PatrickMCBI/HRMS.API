@@ -21,7 +21,6 @@ namespace HRMS.ApiBL
 
         public MessageViewDomain Command(_002a_hrmEmpMasterListDomain projectDomain, Command commandType)
         {
-
             var sqlParameters = new List<SqlParameter>()
             {
                 new SqlParameter { ParameterName = "@ID", Value = projectDomain.ID, Direction = ParameterDirection.Input  },
@@ -30,7 +29,14 @@ namespace HRMS.ApiBL
                 new SqlParameter { ParameterName = "@middleName", Value = projectDomain.middleName, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@lastName", Value = projectDomain.lastName, Direction = ParameterDirection.Input },
                 new SqlParameter { ParameterName = "@dateOfBirth", Value = projectDomain.dateOfBirth, Direction = ParameterDirection.Input },
-                new SqlParameter { ParameterName = "@genderID", Value = projectDomain.genderID, Direction = ParameterDirection.Input }
+                new SqlParameter { ParameterName = "@genderID", Value = projectDomain.genderID, Direction = ParameterDirection.Input },
+                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002bhrmPersonalInfo", "t002b", projectDomain.PersonalInfo),
+                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002chrmEmploymentInfo", "t002c", projectDomain.EmploymentInfo),
+                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002dhrmSpouseName", "t002d", projectDomain.SpouseName),
+                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002ehrmEmpAllowance", "t002e", projectDomain.EmpAllowance),
+                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002fhrmEmpPosition", "t002f", projectDomain.EmpPosition),
+                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002ghrmEmpSalary", "t002g", projectDomain.EmpSalary),
+                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002hhrmEmpSalaryAddOn", "t002h", projectDomain.EmpSalaryAddOn)
             };
 
             return this.GetMessage(_dbHelper.Command("sp002ahrmEmpMasterListCommand", commandType.ToString(), sqlParameters).Tables[0]);

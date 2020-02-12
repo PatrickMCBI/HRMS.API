@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRMS.DAL", "HRMS.DAL\HRMS.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRMS.BL", "HRMS.ApiBL\HRMS.BL.csproj", "{91E4CD16-2790-47B8-B76A-843841B53CB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "..\..\source\repos\Inventory-API4\Helper\Helper.csproj", "{36EA3F0D-4906-4EDA-AE1E-1ABCC0791879}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{91E4CD16-2790-47B8-B76A-843841B53CB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91E4CD16-2790-47B8-B76A-843841B53CB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91E4CD16-2790-47B8-B76A-843841B53CB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36EA3F0D-4906-4EDA-AE1E-1ABCC0791879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36EA3F0D-4906-4EDA-AE1E-1ABCC0791879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36EA3F0D-4906-4EDA-AE1E-1ABCC0791879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36EA3F0D-4906-4EDA-AE1E-1ABCC0791879}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
