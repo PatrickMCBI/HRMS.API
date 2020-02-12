@@ -24,7 +24,7 @@ namespace HRMSDL
         public _001c_hrmRefEmpNumberListDomain empNumber { get; set; }
         public _002b_hrmPersonalInfoDomain PersonalInfo { get; set; }
         public _002c_hrmEmploymentInfoDomain EmploymentInfo { get; set; }
-        public _002d_hrmSpouseNameDomain SpouseName { get; set; }
+        public List<_002d_hrmSpouseNameDomain> SpouseNameList { get; set; }
         public _002e_hrmEmpAllowanceDomain EmpAllowance { get; set; }
         public _002f_hrmEmpPositionDomain EmpPosition { get; set; }
         public _002g_hrmEmpSalaryDomain EmpSalary { get; set; }

@@ -34,7 +34,7 @@ namespace HRMS.ApiBL
                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@001c_hrmRefEmpNumber", "t001c", projectDomain.empNumber),
                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002bhrmPersonalInfo", "t002b", projectDomain.PersonalInfo),
                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002chrmEmploymentInfo", "t002c", projectDomain.EmploymentInfo),
-                Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002dhrmSpouseName", "t002d", projectDomain.SpouseName),
+                Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002dhrmSpouseName", "t002d", projectDomain.SpouseNameList),
                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002ehrmEmpAllowance", "t002e", projectDomain.EmpAllowance),
                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002fhrmEmpPosition", "t002f", projectDomain.EmpPosition),
                 Helper.SqlTableParameter.DotnetPiperExtentionMethod("@002ghrmEmpSalary", "t002g", projectDomain.EmpSalary),
