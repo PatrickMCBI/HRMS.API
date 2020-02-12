@@ -17,7 +17,11 @@ namespace HRMSDL
         public string lastName { get; set; }
         public DateTime dateOfBirth { get; set; }
         public int genderID { get; set; }
+        public DateTime dateHired { get; set; }
 
+
+        public _vwEmployeeNumberDomain EmployeeNumber { get; set; }
+        public _001c_hrmRefEmpNumberListDomain empNumber { get; set; }
         public _002b_hrmPersonalInfoDomain PersonalInfo { get; set; }
         public _002c_hrmEmploymentInfoDomain EmploymentInfo { get; set; }
         public _002d_hrmSpouseNameDomain SpouseName { get; set; }
