@@ -12,7 +12,7 @@ namespace HRMS.DAL
     {
         string ConnectionString
         {
-            get;
+            get;set;
 
         }
 
@@ -32,17 +32,17 @@ namespace HRMS.DAL
     }
     public class DBHelper : IDBHelper
     {
-        public string ConnectionString
-        {
-            //get { return ConfigurationManager.ConnectionStrings["con"].ConnectionString; }
-            get
-            {
-                /*if (HRMS.DAL.Properties.Settings.Default.isTest)
-                    return HRMS.DAL.Properties.Settings.Default.connectionStringTest;*/
 
-                return HRMS.DAL.Properties.Settings.Default.connectionString;
-            }
+        public DBHelper()
+        {
+            ConnectionString = HRMS.DAL.Properties.Settings.Default.connectionString;
         }
+        public DBHelper(string connection)
+        {
+            ConnectionString = connection;
+        }
+
+        public string ConnectionString { get; set; }
 
         public DataSet Command(string sp, string commandType, List<SqlParameter> sqlParameters)
         {

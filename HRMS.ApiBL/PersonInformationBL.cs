@@ -12,15 +12,19 @@ using HRMSDL;
 
 namespace HRMS.ApiBL
 {
-    public interface IPersonInformationBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
+    public interface I_PersonInformationBL<TEntity> : Common.IBaseBL<TEntity> where TEntity : class
     {
 
     }
 
 
-    public class PersonInformationBL : Common.BaseBL, IPersonInformationBL<PersonInformationDL>
+    public class PersonInformationBL : Common.BaseBL, I_PersonInformationBL<PersonInformationDL>
     {
-        private IDBHelper _dbHelper = new DBHelper();
+        private IDBHelper _dbHelper;// = new DBHelper();
+        public PersonInformationBL()
+        {
+            _dbHelper = new DBHelper("server=mcbi-dev;password=MCBI_ITadmin;user=sa;connection timeout=0;Initial Catalog = ERP_HRMS;");
+        }
 
         public MessageViewDomain Command(PersonInformationDL projectDomain, string commandType)
         {
@@ -83,7 +87,7 @@ namespace HRMS.ApiBL
                     LastName = drow.Field<string>("LastName")
                 }
             );*/
-            string tabledata = _dbHelper.GetRecords("spGetBasicInfo", pars).Tables[0].Rows[0][0].ToString();//, Newtonsoft.Json.Formatting.None);
+            string tabledata = JsonConvert.SerializeObject( _dbHelper.GetRecords("spGetBasicInfo", pars).Tables[0], Newtonsoft.Json.Formatting.None);
             return JsonConvert.DeserializeObject<List<PersonInformationDL>>(tabledata);
         }
     }

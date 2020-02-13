@@ -41,6 +41,7 @@ namespace HRMS.API.App_Start
             builder.RegisterType<HRMS.ApiBL._002f_hrmEmpPositionBL>().As<HRMS.ApiBL.I_002f_hrmEmpPositionBL<HRMSDL._002f_hrmEmpPositionDomain>>();
             builder.RegisterType<HRMS.ApiBL._002g_hrmEmpSalaryBL>().As<HRMS.ApiBL.I_002g_hrmEmpSalaryBL<HRMSDL._002g_hrmEmpSalaryDomain>>();
             builder.RegisterType<HRMS.ApiBL._002h_hrmEmpSalaryAddOnBL>().As<HRMS.ApiBL.I_002h_hrmEmpSalaryAddOnBL<HRMSDL._002h_hrmEmpSalaryAddOnDomain>>();
+            builder.RegisterType<HRMS.ApiBL.PersonInformationBL>().As<HRMS.ApiBL.I_PersonInformationBL<HRMS.DL.PersonInformationDL>>();
 
             List<Autofac.Core.Parameter> pars = new List<Autofac.Core.Parameter>();
             //pars.Add( new Autofac.Core.Parameter(""))

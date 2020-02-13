@@ -6,10 +6,7 @@
       <Value Profile="(Default)">server=mcbi-dev;password=MCBI_ITadmin;user=sa;connection timeout=0;Initial Catalog = ERP_HRMS1;</Value>
     </Setting>
     <Setting Name="connection" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=mcbi-dev; database=ERP_HRMS;user=sa;password=MCBI_ITadmin;&lt;/ConnectionString&gt;
-&lt;/SerializableConnectionString&gt;</Value>
+      <Value Profile="(Default)">server=mcbi-dev;password=MCBI_ITadmin;user=sa;connection timeout=0;Initial Catalog = ERP_HRMS;</Value>
     </Setting>
   </Settings>
 </SettingsFile>
